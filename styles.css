@@ -1,0 +1,180 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    text-align: center; /* Center text globally */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0077cc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    flex: 1; /* Allow equal spacing between links */
+    text-align: center; /* Center-align each link in its space */
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Add hover effect */
+    border-radius: 5px;
+}
+
+.toggle-button {
+    flex: 0; /* Prevent toggle button from taking extra space */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: transform 0.2s ease;
+}
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1c1c1c;
+    color: #f4f4f9;
+}
+
+.navbar.dark-mode {
+    background-color: #333;
+}
+
+.nav-link.dark-mode {
+    color: #ddd;
+}
+
+.toggle-button.dark-mode {
+    color: #f4f4f9;
+}
+
+
+/* Header Styling */
+header {
+    text-align: center; /* Center the header text */
+    padding: 20px 0;
+    background: linear-gradient(90deg, #0077cc, #005fa3);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Section Styling */
+section {
+    margin: 20px auto; /* Center the section horizontally */
+    padding: 20px;
+    max-width: 800px; /* Restrict section width */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align text within the section */
+    line-height: 1.8; /* Improve readability */
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+/* Paragraph Styling */
+p {
+    margin: 10px auto; /* Add space around text */
+    max-width: 700px; /* Limit the width of text */
+    text-align: justify; /* Align text evenly on both sides */
+}
+
+/* Images in Sections */
+.food-image, img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 15px 0;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 0.9em;
+}
+
+/* Buttons Centered */
+button, .external-link-button {
+    display: block; /* Ensure buttons are on their own line */
+    margin: 20px auto; /* Center the buttons */
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #0077cc;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, .external-link-button:hover {
+    background-color: #005fa3;
+    transform: translateY(-2px);
+}
+
+button:active, .external-link-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        padding: 10px;
+    }
+
+    .nav-link {
+        flex: unset; /* Remove equal spacing */
+        width: 100%; /* Make each link take up full width */
+        text-align: center;
+    }
+
+    .toggle-button {
+        align-self: center; /* Center the toggle button */
+    }
+}
+.fixed-black-text {
+    color: #000000 !important; /* Always stays black, overriding dark mode */
+}
+
